@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">UX Project</string>
+    <string name="offerString">Ofrece servicios de</string>
+    <string name="searchString">Busca servicios de</string>
+    <string name="searchButton">Buscar</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="community">CommunityIn</string>
+    <string name="forgotPass">¿Olvidaste tu contraseña?</string>
+    <string name="register">¿No tienes cuenta? Regístrate</string>
+    <string name="registrate">Regístrate</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="usernameHint">Juanito Perez</string>
+    <string name="emailHint">correo@electronico.com</string>
+    <string name="passwordHint">Introduce acá tu contraseña</string>
+    <string name="phone">Teléfono</string>
+    <string name="phoneHint">+569 12345678</string>
+    <string name="registerButton">Registrarse</string>
 </resources>
