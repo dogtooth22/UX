@@ -8,7 +8,8 @@
     <string name="login">Iniciar Sesión</string>
     <string name="community">CommunityIn</string>
     <string name="forgotPass">¿Olvidaste tu contraseña?</string>
-    <string name="register">¿No tienes cuenta? Regístrate</string>
+    <string name="register">Regístrate</string>
+    <string name="nocuenta">¿No tienes cuenta?</string>
     <string name="registrate">Regístrate</string>
     <string name="username">Nombre de usuario</string>
     <string name="usernameHint">Juanito Perez</string>

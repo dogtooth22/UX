@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1.5">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/login_picture">
         </ImageView>
 
@@ -25,56 +26,64 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="@string/community"
+            android:textColor="@color/purple_500"
             android:layout_marginTop="7dp">
         </TextView>
-
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/email">
-            </TextView>
+            android:hint="E-mail"
+            android:id="@+id/login_emailLayout"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
                 android:id="@+id/loginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress">
-            </EditText>
-        </LinearLayout>
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="5dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
 
-        <LinearLayout
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/password">
-            </TextView>
+            android:hint="Contraseña"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
                 android:id="@+id/loginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword">
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="5dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
 
-            </EditText>
-
-        </LinearLayout>
-
-        <LinearLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAlignment="textEnd"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="24dp"
+            android:onClick="toForgotPassword"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:text="@string/forgotPass">
+        </TextView>
 
             <Button
                 android:layout_width="match_parent"
@@ -82,40 +91,38 @@
                 android:id="@+id/button"
                 android:layout_gravity="center"
                 android:text="@string/login"
-                android:layout_marginTop="10dp"
-                android:onClick="login">
+                android:layout_marginTop="32dp"
+                android:layout_marginHorizontal="10dp"
+                android:onClick="login"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:background="@drawable/button_style1">
 
             </Button>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:layout_marginTop="7dp"
-                android:onClick="toForgotPassword"
-                android:text="@string/forgotPass">
-            </TextView>
-
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center|bottom">
-
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:textStyle="bold"
-                android:textAlignment="center"
                 android:textSize="18sp"
+                android:text="@string/nocuenta">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/purple_500"
                 android:onClick="register"
                 android:text="@string/register">
             </TextView>
         </LinearLayout>
-    </LinearLayout>
 
+        </LinearLayout>
 </LinearLayout>
