@@ -22,4 +22,7 @@
     <string name="findJob">Buscar Trabajo</string>
     <string name="history">Historial</string>
     <string name="profileName">Perfil Usuario</string>
+    <string name="sugerencias">Sugerencias</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="verPerfil">Ver perfil</string>
 </resources>

@@ -27,8 +27,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void history(View view){
-        //Intent register = new Intent(MenuActivity.this, HistoryActivity.class);
-        //startActivity(register);
+        Intent register = new Intent(MenuActivity.this, HistoryActivity.class);
+        startActivity(register);
     }
 
     @Override

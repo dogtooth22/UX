@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.myapplication.CrearTrabajo;
 import com.example.myapplication.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -36,6 +38,7 @@ public class SearchActivity extends AppCompatActivity
     private GoogleMap map;
     private FloatingActionButton satellite;
     private boolean turned;
+    private Button search;
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
     @Override
@@ -43,6 +46,7 @@ public class SearchActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_activity);
         satellite = (FloatingActionButton) findViewById(R.id.satellite);
+        search = findViewById(R.id.buttonBuscar);
 
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -99,6 +103,11 @@ public class SearchActivity extends AppCompatActivity
         } else {
             return true;
         }
+    }
+
+    public void Buscar(View view){
+        Intent intent = new Intent(SearchActivity.this, CrearTrabajo.class);
+        startActivity(intent);
     }
 
     @Override
