@@ -33,8 +33,9 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
-                    android:text="1"
-                    android:src="@android:drawable/ic_menu_close_clear_cancel" />
+                    app:backgroundTint="#818181"
+                    android:src="@drawable/satellite"
+                    app:maxImageSize="36dp"/>
             </fragment>
 
             <LinearLayout

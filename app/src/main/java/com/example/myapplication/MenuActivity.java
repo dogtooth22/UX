@@ -22,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
         Intent register = new Intent(MenuActivity.this, ProfileActivity.class);
         startActivity(register);
     }
+
     public void map(View view){
         Intent register = new Intent(MenuActivity.this, SearchActivity.class);
         startActivity(register);
