@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu">
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.11"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile"
+            android:layout_gravity="center"
+            android:text="@string/profileMenu"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="profile"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/button_style1">
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/job"
+            android:layout_gravity="center"
+            android:text="@string/findJob"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="map"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/button_style1">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/history"
+            android:layout_gravity="center"
+            android:text="@string/history"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="history"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/button_style1">
+
+        </Button>
+
+
+    </LinearLayout>
+</LinearLayout>

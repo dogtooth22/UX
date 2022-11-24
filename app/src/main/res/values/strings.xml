@@ -18,4 +18,7 @@
     <string name="phone">Teléfono</string>
     <string name="phoneHint">+569 12345678</string>
     <string name="registerButton">Registrarse</string>
+    <string name="profileMenu">Mi Perfil</string>
+    <string name="findJob">Buscar Trabajo</string>
+    <string name="history">Historial</string>
 </resources>

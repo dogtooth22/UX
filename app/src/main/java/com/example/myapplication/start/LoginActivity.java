@@ -1,14 +1,17 @@
-package com.example.myapplication;
+package com.example.myapplication.start;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication.MenuActivity;
+import com.example.myapplication.R;
+import com.example.myapplication.SearchActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,16 +27,14 @@ public class LoginActivity extends AppCompatActivity {
 
         if(email.getText().toString().equals("ux@usm.cl")){
             if(password.getText().toString().equals("123456")){
-                Intent login = new Intent(LoginActivity.this, SearchActivity.class);
+                Intent login = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(login);
             }
         }
-        // Toast.makeText(getApplicationContext(),"Email or password incorrect",Toast.LENGTH_SHORT).show();
-
     }
 
     public void toForgotPassword(View view){
-        Toast.makeText(getApplicationContext(),"Aún no está listo uwu",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Próximamente",Toast.LENGTH_SHORT).show();
     }
 
     public void register(View view) {
