@@ -1,15 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.menu;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.start.LoginActivity;
-import com.example.myapplication.start.RegisterActivity;
+import com.example.myapplication.R;
 
 public class MenuActivity extends AppCompatActivity {
     @Override

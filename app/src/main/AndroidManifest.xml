@@ -32,8 +32,8 @@
         </activity>
 
         <activity
-            android:name=".SearchActivity"
-            android:parentActivityName=".MenuActivity"
+            android:name=".menu.SearchActivity"
+            android:parentActivityName=".menu.MenuActivity"
             android:exported="true">
         </activity>
 
@@ -43,18 +43,18 @@
         </activity>
 
         <activity
-            android:name=".MenuActivity"
+            android:name=".menu.MenuActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name=".ProfileActivity"
-            android:parentActivityName=".MenuActivity"
+            android:name=".menu.ProfileActivity"
+            android:parentActivityName=".menu.MenuActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name=".HistoryActivity"
+            android:name=".menu.HistoryActivity"
             android:exported="true">
         </activity>
     </application>

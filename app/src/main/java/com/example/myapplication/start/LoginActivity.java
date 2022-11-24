@@ -9,9 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.MenuActivity;
+import com.example.myapplication.menu.MenuActivity;
 import com.example.myapplication.R;
-import com.example.myapplication.SearchActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
