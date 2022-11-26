@@ -25,4 +25,9 @@
     <string name="sugerencias">Sugerencias</string>
     <string name="descripcion">Descripcion</string>
     <string name="verPerfil">Ver perfil</string>
+    <string name="DatosPersonales">Datos personales</string>
+    <string name="Horario">Horarios (Lunes a Viernes)</string>
+    <string name="HorarioHardcoded">10:00 AM a 18:00 PM</string>
+    <string name="Calificacion">Calificación</string>
+    <string name="Comentarios">Comentarios</string>
 </resources>

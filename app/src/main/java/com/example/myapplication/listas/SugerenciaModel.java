@@ -3,11 +3,40 @@ package com.example.myapplication.listas;
 import android.media.Image;
 import android.widget.ImageView;
 
-public class SugerenciaModel {
+import java.io.Serializable;
+
+public class SugerenciaModel implements Serializable {
     private String Name;
     private String Job;
     private String Ubication;
+    private String Number;
+    private String Mail;
     private int IdR;
+
+    public SugerenciaModel(String name, String job, String ubication, String number, String mail, int idR) {
+        Name = name;
+        Job = job;
+        Ubication = ubication;
+        Number = number;
+        Mail = mail;
+        IdR = idR;
+    }
+
+    public String getNumber() {
+        return Number;
+    }
+
+    public void setNumber(String number) {
+        Number = number;
+    }
+
+    public String getMail() {
+        return Mail;
+    }
+
+    public void setMail(String mail) {
+        Mail = mail;
+    }
 
     public SugerenciaModel(String name, String job, String ubication, int idR) {
         Name = name;

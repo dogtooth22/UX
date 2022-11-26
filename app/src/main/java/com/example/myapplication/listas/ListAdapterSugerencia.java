@@ -1,6 +1,7 @@
 package com.example.myapplication.listas;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.SearchPerfilActivity;
 
 import java.util.List;
 
@@ -36,6 +38,15 @@ public class ListAdapterSugerencia extends RecyclerView.Adapter<ListAdapterSuger
     @Override
     public void onBindViewHolder(final ListAdapterSugerencia.ViewHolder holder, final int position){
         holder.bindData(ListSugerencias.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),SearchPerfilActivity.class);
+                SugerenciaModel sugerenciaModel = ListSugerencias.get(holder.getAdapterPosition());
+                intent.putExtra("SUGERENCIA",sugerenciaModel);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     public void setItems(List<SugerenciaModel> items) {ListSugerencias = items;}

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication" >
+    package="com.example.myapplication">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-feature android:name="android.hardware.location.gps" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +17,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ComentariosActivity"
+            android:parentActivityName=".CrearTrabajo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SearchPerfilActivity"
+            android:exported="false"
+            android:parentActivityName=".CrearTrabajo">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CrearTrabajo"
-            android:parentActivityName=".menu.SearchActivity"
-            android:exported="false" >
+            android:exported="false"
+            android:parentActivityName=".menu.SearchActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -27,48 +43,35 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAvPUcf1OSo-BOS4xEhDA_PkBpW5WYtWUE"/>
+            android:value="AIzaSyAvPUcf1OSo-BOS4xEhDA_PkBpW5WYtWUE" />
 
         <activity
             android:name=".start.LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".menu.SearchActivity"
-            android:parentActivityName=".menu.MenuActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"
+            android:parentActivityName=".menu.MenuActivity" />
         <activity
             android:name=".start.RegisterActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".menu.MenuActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".menu.ProfileActivity"
-            android:parentActivityName=".menu.MenuActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"
+            android:parentActivityName=".menu.MenuActivity" />
         <activity
             android:name=".menu.HistoryActivity"
-            android:parentActivityName=".menu.MenuActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"
+            android:parentActivityName=".menu.MenuActivity" />
     </application>
-
-
 
 </manifest>
