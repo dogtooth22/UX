@@ -24,6 +24,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".QualificationActivity"
+            android:exported="true"
+            android:parentActivityName=".menu.HistoryActivity">
+
+        </activity>
         <activity
             android:name=".SearchPerfilActivity"
             android:exported="false"
