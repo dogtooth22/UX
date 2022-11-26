@@ -28,13 +28,13 @@
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/satellite"
                     android:clickable="true"
-                    app:cornerRadius="28dp"
+                    app:cornerRadius="20dp"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
-                    app:backgroundTint="#818181"
-                    android:src="@drawable/satellite"
+                    app:backgroundTint="@color/white"
+                    android:src="@drawable/layers"
                     app:maxImageSize="36dp"/>
             </fragment>
 
@@ -62,8 +62,8 @@
                         android:id="@+id/offer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
-                        android:minHeight="48dp"></EditText>
+                        android:inputType="text"
+                        android:minHeight="48dp" />
                 </LinearLayout>
 
                 <LinearLayout

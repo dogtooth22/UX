@@ -2,7 +2,9 @@ package com.example.myapplication.menu;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -37,7 +39,6 @@ public class SearchActivity extends AppCompatActivity
 
     private GoogleMap map;
     private FloatingActionButton satellite;
-    private boolean turned;
     private Button search;
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
@@ -70,13 +71,43 @@ public class SearchActivity extends AppCompatActivity
         map.moveCamera(CameraUpdateFactory.newCameraPosition(USM));
 
         satellite.setOnClickListener(view -> {
-            if(!turned) {
+            // setup the alert builder
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Seleccione una vista");
+
+            String[] animals = {"Normal", "Satélite", "Terreno", "Híbrido"};
+            builder.setItems(animals, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case 0:
+                            Toast.makeText(getApplicationContext(),"Normal",Toast.LENGTH_SHORT).show();
+                            map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                            break;
+                        case 1:
+                            Toast.makeText(getApplicationContext(),"Satélite",Toast.LENGTH_SHORT).show();
+                            map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                            break;
+                        case 2:
+                            Toast.makeText(getApplicationContext(),"Terreno",Toast.LENGTH_SHORT).show();
+                            map.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+                            break;
+                        case 3:
+                            Toast.makeText(getApplicationContext(),"Híbrido",Toast.LENGTH_SHORT).show();
+                            map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                            break;
+                    }
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            /*if(!turned) {
                 turned = true;
                 map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
             } else{
                 turned = false;
                 map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-            }
+            }*/
         });
     }
 
