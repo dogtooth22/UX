@@ -30,5 +30,5 @@
     <string name="HorarioHardcoded">10:00 AM a 18:00 PM</string>
     <string name="Calificacion">Calificación</string>
     <string name="Comentarios">Comentarios</string>
-    <String name="Calificar">Calificar</String>
+    <string name="Calificar">Calificar</string>
 </resources>
