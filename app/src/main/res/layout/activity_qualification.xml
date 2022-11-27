@@ -18,44 +18,31 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="Calificar"
-            android:textSize="50dp"
+            android:textSize="30sp"
             style="@style/TextAppearance.AppCompat.Title"/>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/workerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="El trabajo realizado por:"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"/>
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="15dp"
-            android:text="Nombre trabajador" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/sugerenciaImagen"
-                android:layout_width="100dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/descripcion"
-                android:src="@drawable/sugerencia1" />
-        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/sugerenciaImagen"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/descripcion"
+            android:src="@drawable/sugerencia1" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="40dp"
             android:paddingTop="15dp"
             android:text="¿Esta satisfecho con el trabajo realizado?" />
 
@@ -65,8 +52,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:numStars="5"
-            android:paddingTop="15dp"
-            android:rating="0" />
+            android:paddingTop="7.5dp"
+            android:paddingBottom="7.5dp"
+            android:rating="0"
+            android:theme="@style/RatingBar"/>
 
         <TextView
             android:id="@+id/textView6"
@@ -83,17 +72,19 @@
             android:layout_gravity="center"
             android:numStars="5"
             android:paddingTop="15dp"
-            android:rating="0" />
+            android:rating="0"
+            android:theme="@style/RatingBar"/>
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
             android:text="Enviar"
-            android:background="@drawable/button_style1"
-            />
+            android:clickable="true"
+            android:background="@drawable/button_style1"/>
 
 
     </LinearLayout>

@@ -9,9 +9,8 @@
     android:layout_gravity="center"
     app:cardCornerRadius="20dp"
     app:cardElevation="4dp"
-    app:cardUseCompatPadding="true"
-    >
-    <LinearLayout
+    app:cardUseCompatPadding="true"    >
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
@@ -44,21 +43,26 @@
                 android:text="Ubicacion">
             </TextView>
         </LinearLayout>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            app:cardCornerRadius="360dp">
+            android:gravity="end">
 
-            <ImageView
-                android:id="@+id/sugerenciaImagen"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:contentDescription="@string/descripcion"
-                android:src="@drawable/sugerencia1" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:cardCornerRadius="360dp">
+                <ImageView
+                    android:id="@+id/sugerenciaImagen"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/descripcion"
+                    android:src="@drawable/sugerencia1" />
 
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

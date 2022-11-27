@@ -9,9 +9,8 @@
     android:layout_gravity="center"
     app:cardCornerRadius="20dp"
     app:cardElevation="4dp"
-    app:cardUseCompatPadding="true"
-    >
-    <LinearLayout
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
@@ -30,7 +29,7 @@
 
         </androidx.cardview.widget.CardView>
         <LinearLayout
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="90dp"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -40,8 +39,7 @@
                 android:textStyle="bold"
                 android:id="@+id/Historialnombre"
                 style="@style/TextAppearance.AppCompat.Body2"
-                android:text="Nombre"
-                >
+                android:text="Nombre">
             </TextView>
             <TextView
                 android:layout_width="match_parent"
@@ -59,19 +57,22 @@
                 android:text="Estado"
                 android:layout_marginTop="10dp">
             </TextView>
-
-
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:id="@+id/hitorialcheckstatus"
-            android:src="@drawable/ic_baseline_access_time_24">
-        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/hitorialcheckstatus"
+                android:src="@drawable/ic_baseline_access_time_24">
+            </ImageView>
+        </LinearLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

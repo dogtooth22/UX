@@ -21,7 +21,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.example.myapplication.CrearTrabajo;
 import com.example.myapplication.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -81,19 +80,15 @@ public class SearchActivity extends AppCompatActivity
                 public void onClick(DialogInterface dialog, int which) {
                     switch (which) {
                         case 0:
-                            Toast.makeText(getApplicationContext(),"Normal",Toast.LENGTH_SHORT).show();
                             map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                             break;
                         case 1:
-                            Toast.makeText(getApplicationContext(),"Satélite",Toast.LENGTH_SHORT).show();
                             map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
                             break;
                         case 2:
-                            Toast.makeText(getApplicationContext(),"Terreno",Toast.LENGTH_SHORT).show();
                             map.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
                             break;
                         case 3:
-                            Toast.makeText(getApplicationContext(),"Híbrido",Toast.LENGTH_SHORT).show();
                             map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
                             break;
                     }

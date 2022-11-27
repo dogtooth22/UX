@@ -14,4 +14,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="RatingBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorControlActivated">#FFDD00</item>
+        <item name="colorControlNormal">#838383</item>
+    </style>
+
+    <style name="MapStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:mapViewStyle">@string/night_json</item>
+        <item name="colorControlNormal">#838383</item>
+    </style>
 </resources>

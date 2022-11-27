@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrearTrabajo">
+    tools:context=".menu.CrearTrabajo">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,6 +13,7 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
+        android:textSize="30sp"
         />
 
     <androidx.recyclerview.widget.RecyclerView

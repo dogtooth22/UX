@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
+            style="@style/TextAppearance.AppCompat.Title"
             android:textSize="30sp"
             android:text="@string/profileName" />
 

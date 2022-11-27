@@ -26,14 +26,13 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.history_activity);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
         init();
     }
     public void init(){
         elements = new ArrayList<>();
-        elements.add(new HistorialModel("Juanito Perez","Gasfiter","Evaluar",R.drawable.ic_baseline_access_time_24));
-        elements.add(new HistorialModel("Diego Perez","Gasfiter","Evaluado",R.drawable.ic_baseline_check_24));
-
-
+        elements.add(new HistorialModel("Juanito Perez","Gasfiter","Evaluar", R.drawable.ic_baseline_access_time_24, R.drawable.sugerencia1));
+        elements.add(new HistorialModel("Mario Bros","Gasfiter","Evaluado", R.drawable.ic_baseline_check_24, R.drawable.sugerencia2));
 
         ListAdapterHistorial adapter = new ListAdapterHistorial(elements,this);
         RecyclerView recyclerView = findViewById(R.id.historiallist);

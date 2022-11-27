@@ -68,7 +68,6 @@ public class ListAdapterSugerencia extends RecyclerView.Adapter<ListAdapterSuger
             Job.setText(item.getJob());
             Ubication.setText(item.getUbication());
             Integer idDebug = item.getIdR();
-            Log.d("La wea",idDebug.toString());
             imagenSugerencia.setImageResource(item.getIdR());
         }
     }

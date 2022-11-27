@@ -23,6 +23,7 @@
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:theme="@style/MapStyle"
                 android:layout_weight="0.5">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -55,7 +56,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/offerString">
+                        android:text="@string/searchString">
                     </TextView>
 
                     <EditText
@@ -75,14 +76,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/searchString">
+                        android:text="@string/zoneString">
                     </TextView>
 
                     <EditText
                         android:id="@+id/search"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
+                        android:inputType="text"
                         android:minHeight="48dp">
 
                     </EditText>
@@ -97,6 +98,7 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
                         android:id="@+id/buttonBuscar"
                         android:layout_gravity="center"
                         android:text="@string/searchButton"

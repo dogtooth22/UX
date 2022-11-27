@@ -136,7 +136,20 @@
             android:layout_gravity="center"
             android:rating="4"
             android:numStars="5"
-            android:isIndicator="true"/>
+            android:isIndicator="true"
+            android:theme="@style/RatingBar"/>
+
+        <Button
+            android:id="@+id/ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/ratings"
+            android:clickable="true"
+            android:onClick="Ratings"
+            android:background="@drawable/button_style1"/>
 
     </LinearLayout>
 

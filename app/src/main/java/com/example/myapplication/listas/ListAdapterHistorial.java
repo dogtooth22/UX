@@ -43,9 +43,10 @@ public class ListAdapterHistorial extends RecyclerView.Adapter<ListAdapterHistor
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HistorialModel a=ListHistorial.get(holder.getAdapterPosition());
-                if (a.getEstado().equals("Evaluar")){
+                HistorialModel historialModel = ListHistorial.get(holder.getAdapterPosition());
+                if (historialModel.getEstado().equals("Evaluar")){
                     Intent intent = new Intent(view.getContext(), QualificationActivity.class);
+                    intent.putExtra("HISTORIAL", historialModel);
                     view.getContext().startActivity(intent);}
 
             }
@@ -55,11 +56,12 @@ public class ListAdapterHistorial extends RecyclerView.Adapter<ListAdapterHistor
     public void setItems(List<HistorialModel> items) {ListHistorial = items;}
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView imagenestado;
+        ImageView imagenestado, imagenusuario;
         TextView Name, Job, Estado;
 
         ViewHolder (View itemView){
             super (itemView);
+            imagenusuario = itemView.findViewById(R.id.Historialimagen);
             imagenestado = itemView.findViewById(R.id.hitorialcheckstatus);
             Name = itemView.findViewById(R.id.Historialnombre);
             Job = itemView.findViewById(R.id.Historialtrabajo);
@@ -70,6 +72,7 @@ public class ListAdapterHistorial extends RecyclerView.Adapter<ListAdapterHistor
             Name.setText(item.getNombre());
             Job.setText(item.getTrabajo());
             Estado.setText(item.getEstado());
+            imagenusuario.setImageResource(item.getImg());
             imagenestado.setImageResource(item.getIdR());
         }
     }

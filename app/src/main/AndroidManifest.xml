@@ -16,39 +16,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAvPUcf1OSo-BOS4xEhDA_PkBpW5WYtWUE" />
+
         <activity
             android:name=".ComentariosActivity"
-            android:parentActivityName=".CrearTrabajo"
+            android:parentActivityName=".menu.MenuActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".QualificationActivity"
+        <activity
+            android:name=".QualificationActivity"
             android:exported="true"
-            android:parentActivityName=".menu.HistoryActivity">
-
+            android:parentActivityName=".menu.MenuActivity">
         </activity>
         <activity
             android:name=".SearchPerfilActivity"
             android:exported="false"
-            android:parentActivityName=".CrearTrabajo">
+            android:parentActivityName=".menu.MenuActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CrearTrabajo"
+            android:name=".menu.CrearTrabajo"
             android:exported="false"
-            android:parentActivityName=".menu.SearchActivity">
+            android:parentActivityName=".menu.MenuActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAvPUcf1OSo-BOS4xEhDA_PkBpW5WYtWUE" />
 
         <activity
             android:name=".start.LoginActivity"
