@@ -139,11 +139,14 @@
             android:isIndicator="true"
             android:theme="@style/RatingBar"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ratings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="20sp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/ratings"

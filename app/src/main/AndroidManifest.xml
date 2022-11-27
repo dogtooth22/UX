@@ -66,6 +66,7 @@
             android:parentActivityName=".menu.MenuActivity" />
         <activity
             android:name=".start.RegisterActivity"
+            android:parentActivityName=".start.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".menu.MenuActivity"

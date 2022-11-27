@@ -3,72 +3,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient2"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2.18">
-
-        <ImageView
+        android:layout_weight="2">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/menu">
-        </ImageView>
-
-    </LinearLayout>
-
+            android:layout_height="wrap_content">
+            <ImageView
+                android:background="@drawable/gradient2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/menu">
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_weight="1.11"
         android:orientation="vertical">
-
-        <Button
+        <TextView
             android:layout_width="match_parent"
+            android:text="¿Qué necesitas?"
+            style="@style/TextoNaranjoTitulo"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
             android:layout_height="wrap_content"
-            android:id="@+id/profile"
+            android:layout_marginHorizontal="40dp"
+            android:elevation="40dp"
             android:layout_gravity="center"
-            android:text="@string/profileMenu"
-            android:layout_marginTop="32dp"
-            android:layout_marginHorizontal="10dp"
-            android:onClick="profile"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:background="@drawable/button_style1">
-        </Button>
+            app:cardBackgroundColor="@color/orangePrimary"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/profile"
+            android:onClick="profile">
+            <RelativeLayout
+                android:background="@drawable/gradient1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/profileMenu"
+                    android:id="@+id/profileText1"
+                    android:layout_toRightOf="@id/menuProfileImg"
+                    style="@style/cardViewTitulo"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/cardViewCuerpo"
+                    android:layout_below="@+id/profileText1"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/menuProfileImg"
+                    android:text="¿Quieres revisar tu perfil?">
+                </TextView>
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/menuProfileImg"
+                    android:src="@drawable/profileiconhd">
+                </ImageView>
+            </RelativeLayout>
 
-        <Button
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            android:layout_marginHorizontal="40dp"
             android:id="@+id/job"
             android:layout_gravity="center"
-            android:text="@string/findJob"
-            android:layout_marginTop="32dp"
-            android:layout_marginHorizontal="10dp"
             android:onClick="map"
-            android:textAllCaps="false"
-            android:textSize="18sp"
             android:background="@drawable/button_style1">
+            <RelativeLayout
+                android:background="@drawable/gradient1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/cardViewTitulo"
+                    android:id="@+id/menuBuscarTrabajo"
+                    android:layout_toRightOf="@id/menuTrabajoImg"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/findJob">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/cardViewCuerpo"
+                    android:text="¿Necesitas contratar a alguien?"
+                    android:layout_toRightOf="@id/menuTrabajoImg"
+                    android:layout_below="@id/menuBuscarTrabajo"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"></TextView>
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/menuTrabajoImg"
+                    android:src="@drawable/workiconhd"
+                    ></ImageView>
+            </RelativeLayout>
 
-        </Button>
+        </androidx.cardview.widget.CardView>
 
-        <Button
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+
             android:id="@+id/history"
             android:layout_gravity="center"
-            android:text="@string/history"
-            android:layout_marginTop="32dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="40dp"
             android:onClick="history"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:background="@drawable/button_style1"
             tools:ignore="UsingOnClickInXml">
+            <RelativeLayout
+                android:background="@drawable/gradient1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/cardViewTitulo"
+                    android:id="@+id/menuHistorialText"
+                    android:text="@string/history"
+                    android:layout_toRightOf="@+id/menuHistorialImg"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"></TextView>
+                <ImageView
+                    android:layout_width="80dp"
+                    android:id="@+id/menuHistorialImg"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/checklisticonhd"
+                    android:layout_height="80dp">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/cardViewCuerpo"
+                    android:layout_toRightOf="@+id/menuHistorialImg"
+                    android:layout_below="@+id/menuHistorialText"
+                    android:layout_marginStart="10dp"
+                    android:text="¿Buscas evaluar un trabajo realizado?"
+                    android:layout_height="wrap_content"></TextView>
 
-        </Button>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>
